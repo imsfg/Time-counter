@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Web Time Tracker",
+    "name": "Time Counter App",
     "version":"1.0.0",
-    "description":"Keeps track of time",
+    "description":"Keeps track of each website time",
     "icons": { 
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
@@ -17,7 +17,7 @@
         "default_icon": {
             "16": "icons/icon16.png"
         },
-        "default_title":"Web Time Tracker"
+        "default_title":"Time-Counter"
     },
     "web_accessible_resources": [
         "index.html","login.html","popup.html"

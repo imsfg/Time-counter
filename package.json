@@ -14,6 +14,7 @@
     "@types/chrome": "^0.0.268"
   },
   "dependencies": {
+    "env": "^0.0.2",
     "sinon-chrome": "^3.0.1"
   }
 }
