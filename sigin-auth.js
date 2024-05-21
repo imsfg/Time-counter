@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 
   // Replace this with your actual login API call
-  fetch('http://localhost:3000/login', {
+  fetch('https://time-counter-ext.onrender.com/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -20,6 +20,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       chrome.storage.local.set({'users': username});
 
       login();
+      console.log("heloo")
       chrome.storage.sync.set({ loggedIn: true }, function() {
         // Redirect to popup.html
         window.location.href = 'popup.html';

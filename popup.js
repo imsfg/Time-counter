@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       function fetchDataFromDatabase(today) {
         chrome.storage.local.get("users", function (result) {
           fetch(
-            `http://localhost:3306/fetch-data?date=${today}&users=${result.users}`
+            `https://time-counter-ext.onrender.com/fetch-data?date=${today}&users=${result.users}`
           )
             .then((response) => {
               if (!response.ok) {
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       function updateRegistration(webURL, info) {
         chrome.storage.local.get("users", function (result) {
           let users=result.users;
-        fetch("http://localhost:3306/update-registration", {
+        fetch("https://time-counter-ext.onrender.com/update-registration", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             function fetchDataForGivenDate(givenDate) {
               fetch(
-                `http://localhost:3306/fetch-data-for-date?date=${givenDate}&users=${keywords}`
+                `https://time-counter-ext.onrender.com/fetch-data-for-date?date=${givenDate}&users=${keywords}`
               )
                 .then((response) => {
                   if (!response.ok) {
@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Dec",
       ];
       document.getElementById("weekTab").addEventListener("click", function () {
-        fetch(`http://localhost:3306/fetch-weekly-data?users=${keywords}`)
+        fetch(`https://time-counter-ext.onrender.com/fetch-weekly-data?users=${keywords}`)
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to fetch weekly data");
@@ -499,7 +499,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document
         .getElementById("sign-out-btn")
         .addEventListener("click", function () {
-          fetch("http://localhost:3306/sign-out", {
+          fetch("https://time-counter-ext.onrender.com/sign-out", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
           })
