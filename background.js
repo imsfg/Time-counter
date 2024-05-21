@@ -112,7 +112,7 @@ function updateTime() {
         var keywords = "";
         chrome.storage.local.get("users", function (result) {
           keywords = result.users;
-          fetch("http://localhost:3000/update-time", {
+          fetch("http://localhost:3306/update-time", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -172,7 +172,7 @@ function checkFocus() {
       // Fetch the list of blocked websites from the server
       chrome.storage.local.get("users", function (result) {
         keywords = result.users;
-      fetch(`http://localhost:3000/blocked-websites?date1=${today1}&users=${keywords}`)
+      fetch(`http://localhost:3306/blocked-websites?date1=${today1}&users=${keywords}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch blocked websites");
@@ -199,7 +199,7 @@ function checkFocus() {
 function isLoggedIn() {
   return new Promise((resolve, reject) => {
     
-    fetch("http://localhost:3000/check-login", {
+    fetch("http://localhost:3306/check-login", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })

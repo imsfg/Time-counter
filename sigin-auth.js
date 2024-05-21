@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 
   // Replace this with your actual login API call
-  fetch('http://localhost:3000/login', {
+  fetch('http://localhost:3306/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   .then(data => {
     if (data.success) {
       chrome.storage.local.set({'users': username});
-        
+
       login();
       chrome.storage.sync.set({ loggedIn: true }, function() {
         // Redirect to popup.html
