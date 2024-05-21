@@ -8,13 +8,13 @@ A Chrome Extension that keeps track of the time you spend on various websites, e
 3. Click on **Load unpacked** and select the location of unzipped source folder.
 
 ## Features 
-* Login features. <br> <img src= "images/login.png" height = "400">
-* Sign Up features. <br> <img src= "images/signup.png" height = "400">
-* Detailed view of our extension. <br> <img src= "images/Details-view.png" height = "400">
-* All features of our extension. <br> <img src= "images/all-fetures.png" height = "400">
-* Block particular website features. <br> <img src= "images/block-features.gif" height = "400">
-* Select a date and view time spent details <br> <img src = "images/on-selectDate.png" height = "400">
-* weekly data details <br> <img src = "images/weekly-data.png" height = "400">
+* Login features. <br> <img src= "./images/login.png" height = "400">
+* Sign Up features. <br> <img src= "./images/signup.png" height = "400">
+* Detailed view of our extension. <br> <img src= "./images/Details-view.png" height = "400">
+* All features of our extension. <br> <img src= "./images/all-fetures.png" height = "400">
+* Block particular website features. <br> <img src= "./images/block-features.png" height = "400">
+* Select a date and view time spent details <br> <img src = "./images/on-selectDate.png" height = "400">
+* weekly data details <br> <img src = "./images/weekly-data.png" height = "400">
 
 
 ## Contributors
