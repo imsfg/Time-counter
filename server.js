@@ -1,7 +1,7 @@
 // server.js
 
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const app = express();
 const port = 3306;
 
@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
     user:process.env.USER,
     password:process.env.PASSWORD,
     database:process.env.DATABASE,
-    connectionLimit:10
+    connectionLimit:50
 });
 
 connection.connect(err => {
@@ -26,6 +26,7 @@ connection.connect(err => {
   }
   console.log('Connected to MySQL database as ID ' + connection.threadId);
 });
+
 
 const jwt = require('jsonwebtoken');
 const secretKey="djsufebeknkcjcj";
