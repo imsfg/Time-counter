@@ -36,8 +36,6 @@ const secretKey="djsufebeknkcjcj";
 app.post('/update-time', (req, res) => {
     const { date, domain,users } = req.body;
     let time = 0;
-    console.log(users);
-    console.log("hi");
     connection.query('SELECT time FROM domaininfo WHERE date = ? AND domain = ? AND users=?', [date, domain,users], (error, results) => {
       if (error) {
         console.error(error);
