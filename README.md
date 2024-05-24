@@ -1,3 +1,5 @@
+Actually , I use free server due to which it's slow please give some respod time of this extension
+
 # Time-Counter Application
 
 A Chrome Extension that keeps track of the time you spend on various websites, each day.
